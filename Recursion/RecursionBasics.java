@@ -21,7 +21,20 @@ public class RecursionBasics {
             System.out.print(n + " ");
         }
     }
-   public static void main(String[] args) {
+    //factorial of a number
+    public static void fact(int n , int fact){
+        //base case
+        if(n==1){
+            fact = fact*n;
+            System.out.println("\nthe value of factorial is: " + fact);
+            return;
+        }
+        else{
+            fact = fact*n;
+            fact(n-1 , fact);
+        }
+    }
+   public static void main(String[] args) { 
     //first method
     int s = 1;
     int n = 10 ;
@@ -29,6 +42,9 @@ public class RecursionBasics {
     //second method
     int num=10;
     printInc(num);
+    
+    int fact=1;
+    fact(5 , fact);
 }
 } 
 

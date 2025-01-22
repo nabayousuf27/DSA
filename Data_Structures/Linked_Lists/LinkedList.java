@@ -11,7 +11,7 @@ public class LinkedList{
     public static Node head; //class k andar as a static property because evrtytime it will remains the same
     public static Node tail;
     public static int size; //by deafult zero by java
-    //methodss
+    //methods
     public void addFirst(int data){
         Node n1 = new Node(data);
         size++;
