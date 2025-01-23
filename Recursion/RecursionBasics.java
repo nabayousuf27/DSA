@@ -36,10 +36,16 @@ public class RecursionBasics {
         if(n==0){
             return 1;
         }
-        else{
-            return n * fact(n-1);
-        }
+        return n * fact(n-1);
     }
+    //sum of first n natural numbers
+    public static int calcSum(int n){
+        if(n==1){
+            return 1;
+        }
+        return n+ calcSum(n-1);
+    }
+
    public static void main(String[] args) { 
     //for first method
     int s = 1;
@@ -51,6 +57,7 @@ public class RecursionBasics {
     //factorial
     System.out.println("\nthe value of factorial is: " + fact(5));
     printDec(8);
+    System.out.println(calcSum(5));
 }
 } 
 
