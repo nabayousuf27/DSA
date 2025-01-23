@@ -1,5 +1,5 @@
 public class RecursionBasics {
-    //1st method by me
+    //print numbers in increasing order - 1st method by me
     public static void printInc(int s , int n){
         if(s==n){
             System.out.println(s + " ");
@@ -21,30 +21,36 @@ public class RecursionBasics {
             System.out.print(n + " ");
         }
     }
-    //factorial of a number
-    public static void fact(int n , int fact){
-        //base case
+    //print Number in decreasing order
+    public static void printDec(int n){
         if(n==1){
-            fact = fact*n;
-            System.out.println("\nthe value of factorial is: " + fact);
+            System.out.println(n);
             return;
         }
+        System.out.print(n + " ");
+        printDec(n-1);
+    }
+    //factorial of a number
+    public static int fact(int n){
+        //base case
+        if(n==0){
+            return 1;
+        }
         else{
-            fact = fact*n;
-            fact(n-1 , fact);
+            return n * fact(n-1);
         }
     }
    public static void main(String[] args) { 
-    //first method
+    //for first method
     int s = 1;
     int n = 10 ;
     printInc(s ,n);
-    //second method
+    //for second method
     int num=10;
     printInc(num);
-    
-    int fact=1;
-    fact(5 , fact);
+    //factorial
+    System.out.println("\nthe value of factorial is: " + fact(5));
+    printDec(8);
 }
 } 
 
