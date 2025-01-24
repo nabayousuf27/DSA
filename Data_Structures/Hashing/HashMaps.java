@@ -11,7 +11,7 @@ public class HashMaps {
     hm.put("UAE",180);
     System.out.println(hm);
 
-    //get - 0(1) // to key the value of key
+    //get - 0(1) // to get the value of key
     int population = hm.get("pakistan");
     System.out.println(population);
 
