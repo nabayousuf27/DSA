@@ -1,4 +1,3 @@
-package Data_Structures.Hashing;
 import java.util.*;
 public class IterationOnHashMap {
     public static void main(String[] args) {
