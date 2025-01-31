@@ -15,6 +15,9 @@ It serves as a learning resource and practice space for:
 - 📌 Stacks
 - 📌 Queues (Linear, Circular, Deque)
 - 📌 Hashing
+### Algorithms
+- 📌 Sorting (Bubble, Merge, Quick, Heap Sort, etc.)
+- 📌Recursion 
 
 ## ✨ Features
 - ✅ Well-structured code with comments
