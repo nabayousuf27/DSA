@@ -1,4 +1,4 @@
-# DSA Repository 🚀
+# DSA Repository
 
 ## Overview
 This repository contains my implementations of various Data Structures and Algorithms (DSA).  
