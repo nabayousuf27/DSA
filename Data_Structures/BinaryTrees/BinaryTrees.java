@@ -58,7 +58,7 @@ public class BinaryTrees {
         }
 
         //LevelOrder
-        public static void levelOrder(Node root){ //0(n)
+        public static void levelOrder(Node root){ 
             if(root == null){
                 return;
             }
@@ -87,13 +87,22 @@ public class BinaryTrees {
                 
             }
         }
+        //height of binary tree
+        public static int height(Node root){
+            if(root == null){
+                return 0;
+            }
+            int lh = height(root.left);
+            int rh = height(root.right);
+            return Math.max(lh, rh) + 1;
+        }
     }
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
-        
+
         // traversals
         System.out.print("Pre Order : ");
         tree.preOrder(root);
@@ -106,6 +115,8 @@ public class BinaryTrees {
 
         System.out.println("\nLevel Order : ");
         tree.levelOrder(root);
+
+        System.err.println("height of tree : "+ tree.height(root));
     }
     
 }
