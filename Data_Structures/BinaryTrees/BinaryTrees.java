@@ -26,6 +26,7 @@ public class BinaryTrees {
             
             return newNode;
         }
+        //preOrder
         public static void preOrder(Node root){ //0(n)
             if(root == null){
                 return;
@@ -34,6 +35,15 @@ public class BinaryTrees {
             preOrder(root.left);
             preOrder(root.right);
         }
+        //InOrder
+        public static void inOrder(Node root){ //0(n)
+            if(root == null){
+                return;
+            }
+            inOrder(root.left);
+            System.out.print(root.data + " ");
+            inOrder(root.right);
+        }
     }
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -41,6 +51,8 @@ public class BinaryTrees {
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
         tree.preOrder(root);
+        System.out.println();
+        tree.inOrder(root);
     }
     
 }
