@@ -28,6 +28,18 @@ public class DoublyLinkedList{
         head.prev = n1;
         head = n1;
     }
+    public void addLast(int data){
+        Node n1 = new Node(data);
+        size++;
+        if(head == null){
+            head = tail = n1;
+            return;
+        }
+        tail.next=n1;
+        n1.next = null;
+        n1.prev = tail;
+        tail=n1;
+    }
     public int revomeFirst(){
         if(head == null){
             System.out.println("empty ");
@@ -68,6 +80,8 @@ public class DoublyLinkedList{
         dll.addFirst(2);
         dll.print();
         dll.revomeFirst();
+        dll.print();
+        dll.addLast(5);
         dll.print();
         System.out.println(dll.size);
     }
