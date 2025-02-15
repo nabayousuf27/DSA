@@ -57,6 +57,27 @@ public class DoublyLinkedList{
         size--;
         return val;
     }
+    public int revomeLast(){
+        if(head == null){
+            System.out.println("empty ");
+            return Integer.MIN_VALUE;
+        }
+        if(size == 1){
+            int val = head.data;
+            head = tail = null ;
+            size-- ;
+            return val;
+        }
+        int val = tail.data;
+        Node temp = head;
+        while(temp.next.next != null){
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = tail.prev;
+        size--;
+        return val;
+    }
     public void print(){//haed already hai so no need to pass any parameter
         if(head == null){
         System.out.println("link list is empy");
@@ -82,6 +103,8 @@ public class DoublyLinkedList{
         dll.revomeFirst();
         dll.print();
         dll.addLast(5);
+        dll.print();
+        dll.revomeLast();
         dll.print();
         System.out.println(dll.size);
     }
