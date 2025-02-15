@@ -91,7 +91,20 @@ public class DoublyLinkedList{
         }
         System.out.println("null");
     }
-    
+    public void reverseDll(){
+        Node curr = head;
+        Node prev = null;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
@@ -107,5 +120,8 @@ public class DoublyLinkedList{
         dll.revomeLast();
         dll.print();
         System.out.println(dll.size);
+        dll.reverseDll();
+        System.out.println("Reversed Doubly linked List");
+        dll.print();
     }
 }
