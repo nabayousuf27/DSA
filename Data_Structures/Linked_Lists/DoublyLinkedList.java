@@ -1,3 +1,4 @@
+import java.util.*; 
 public class DoublyLinkedList{
     public  class Node{
         int data;
@@ -27,6 +28,23 @@ public class DoublyLinkedList{
         head.prev = n1;
         head = n1;
     }
+    public int revomeFirst(){
+        if(head == null){
+            System.out.println("empty ");
+            return Integer.MIN_VALUE;
+        }
+        if(size == 1){
+            int val = head.data;
+            head = tail = null ;
+            size-- ;
+            return val;
+        }
+        int val = head.data;
+        head = head.next;
+        head.prev = null;
+        size--;
+        return val;
+    }
     public void print(){//haed already hai so no need to pass any parameter
         if(head == null){
         System.out.println("link list is empy");
@@ -41,12 +59,15 @@ public class DoublyLinkedList{
         System.out.println("null");
     }
     
+    
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
       
         dll.addFirst(4);
         dll.addFirst(3);
         dll.addFirst(2);
+        dll.print();
+        dll.revomeFirst();
         dll.print();
         System.out.println(dll.size);
     }
